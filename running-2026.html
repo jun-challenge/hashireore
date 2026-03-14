@@ -31,7 +31,7 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
       padding: 20px;
     }
@@ -43,16 +43,8 @@
       text-align: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 16px;
-      opacity: 0.9;
-    }
+    header h1 { margin: 0; font-size: 32px; }
+    header p { margin-top: 10px; font-size: 16px; opacity: 0.9; }
 
     nav {
       background: white;
@@ -82,7 +74,6 @@
       padding-left: 10px;
     }
 
-    /* 目標バナー */
     .goal-banner {
       background: linear-gradient(135deg, #e8f4ff, #f0faff);
       border-left: 4px solid #0077cc;
@@ -93,35 +84,30 @@
       color: #0077cc;
     }
 
-    /* テーブルのスマホ対応 */
-    .table-wrap {
-      overflow-x: auto;
-    }
+    .table-wrap { overflow-x: auto; }
 
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 15px;
+      font-size: 14px;
     }
 
     th, td {
       border-bottom: 1px solid #ddd;
-      padding: 10px;
+      padding: 10px 8px;
       text-align: center;
+      white-space: nowrap;
     }
 
-    th {
-      background-color: #f0f6ff;
+    td:last-child {
+      white-space: normal;
+      text-align: left;
+      min-width: 160px;
     }
 
-    .no-data {
-      text-align: center;
-      color: #aaa;
-      padding: 30px;
-      font-size: 14px;
-    }
+    th { background-color: #f0f6ff; }
 
-    /* 年間まとめカード */
     .stats-grid {
       display: flex;
       flex-wrap: wrap;
@@ -138,36 +124,13 @@
       text-align: center;
     }
 
-    .stat-card .icon {
-      font-size: 24px;
-    }
+    .stat-card .icon { font-size: 24px; }
+    .stat-card .value { font-weight: bold; font-size: 18px; margin: 4px 0; }
+    .stat-card .label { font-size: 12px; color: #777; }
 
-    .stat-card .value {
-      font-weight: bold;
-      font-size: 18px;
-      margin: 4px 0;
-    }
-
-    .stat-card .label {
-      font-size: 12px;
-      color: #777;
-    }
-
-    /* 前年リンク */
-    .prev-year {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .prev-year a {
-      color: #0077cc;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .prev-year a:hover {
-      text-decoration: underline;
-    }
+    .prev-year { text-align: center; margin-top: 10px; }
+    .prev-year a { color: #0077cc; text-decoration: none; font-size: 14px; }
+    .prev-year a:hover { text-decoration: underline; }
 
     footer {
       text-align: center;
@@ -178,7 +141,7 @@
 
     @media (max-width: 600px) {
       header h1 { font-size: 22px; }
-      th, td { font-size: 14px; }
+      th, td { font-size: 13px; padding: 8px 5px; }
       .stat-card { min-width: 100px; }
     }
   </style>
@@ -198,122 +161,173 @@
 <div class="container">
 
   <section>
-    <h2>📅 2026年のランニングまとめ</h2>
+    <h2>📅 2026年走行まとめ</h2>
     <div class="goal-banner">🎯 2026年の目標：フルマラソン完走</div>
     <div class="table-wrap">
-      <table>
-        <tr>
-          <th>日付</th>
-          <th>走行距離 (km)</th>
-          <th>平均ペース (/km)</th>
-          <th>ケイデンス (歩/分)</th>
-          <th>ひとこと</th>
-        </tr>
-        <tr>
-          <td>1/16</td>
-          <td>11.65</td>
-          <td>7:12</td>
-          <td>150</td>
-          <td>左ひざと右足首に少し痛みが出てきた。調子は良かった。</td>
-        </tr>
-　　　　<tr>
-          <td>1/18</td>
-          <td>2.23</td>
-          <td>10:56</td>
-          <td>88</td>
-          <td>近所に用事があって少しウォーキング。天気も良くて気分もリフレッシュできた。</td>
-        </tr>
-　　　　<tr>
-          <td>2/4</td>
-          <td>7.12</td>
-          <td>6:50</td>
-          <td>147</td>
-          <td>はじめてランニングシューズで走った記念日。</td>
-        </tr>
-　　　　<tr>
-          <td>2/13</td>
-          <td>9.61</td>
-          <td>7:07</td>
-          <td>152</td>
-          <td>後半にかけてペースを上げれた、もう少しで10㎞。</td>
-        </tr>
-　　　　<tr>
-          <td>2/18</td>
-          <td>12.18</td>
-          <td>6:36</td>
-          <td>141</td>
-          <td>ヒールロックで走った。つま先の痛みが無く最高。5㎞地点で幸せホルモン？みたいなものを感じた。最後はランナーズハイ？ずっと走れそうみたいな感覚になった。初めての10㎞越え。</td>
-        </tr>
-　　　　<tr>
-          <td>2/23</td>
-          <td>13.71</td>
-          <td>6:11</td>
-          <td>151</td>
-          <td>過去最長距離。5分台/㎞で走れるようになってきた。初めてのフルマラソンでサブ4狙えるんじゃないかと妄想してみたり…。</td>
-        </tr>
-　　　　<tr>
-          <td>2/27</td>
-          <td>7.82</td>
-          <td>6:50</td>
-          <td>155</td>
-          <td>初めての月間走行距離50㎞超え！</td>
-        </tr>
-　　　　<tr>
-          <td>3/4</td>
-          <td>17.47</td>
-          <td>6:02</td>
-          <td>148</td>
-          <td>初めての15㎞越え。平均ペースも上がってきたが、13㎞以降足の感覚が無くなっていた。</td>
-        </tr>
-　　　　<tr>
-          <td>3/10</td>
-          <td>3.06</td>
-          <td>5:18</td>
-          <td>157</td>
-          <td>少し疲れが残っていたのと、時間があまりなかったので、いつものコースで3㎞のタイムアタック。呼吸が辛くかったが良い経験になった。</td>
-        </tr>
-　　　　<tr>
-          <td>3/14</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>走る予定</td>
-        </tr>
+      <!--
+        【データの入力方法】
+        各 <tr> の data-* 属性に数値を入れると年間まとめが自動計算されます。
+        data-dist    : 走行距離 (km)        例: 10.5
+        data-pace    : 平均ペース (分:秒)   例: 6:30
+        data-cadence : ケイデンス (歩/分)   例: 150
+        data-kcal    : 消費カロリー (kcal)  例: 850
+        data-elev    : 累積標高 (m)         例: 120
+        data-time    : トレーニング時間     例: 1:10:30
+        ウォーキングなど集計に含めたくない行は data-* を書かなければOK
+      -->
+      <table id="runTable">
+        <thead>
+          <tr>
+            <th>日付</th>
+            <th>距離<br>(km)</th>
+            <th>ペース<br>(/km)</th>
+            <th>ケイデンス<br>(歩/分)</th>
+            <th>カロリー<br>(kcal)</th>
+            <th>標高<br>(m)</th>
+            <th>時間</th>
+            <th>ひとこと</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-dist="11.65" data-pace="7:12" data-cadence="150" data-kcal="870" data-elev="111" data-time="1:23:47">
+            <td>1/16</td>
+            <td>11.65</td>
+            <td>7:12</td>
+            <td>150</td>
+            <td>870</td>
+            <td>111</td>
+            <td>1:23:47</td>
+            <td>左ひざと右足首に少し痛みが出てきた。調子は良かった。</td>
+          </tr>
+          <tr>
+            <td>1/18</td>
+            <td>2.23</td>
+            <td>10:56</td>
+            <td>88</td>
+            <td>122</td>
+            <td>12</td>
+            <td>24:21</td>
+            <td>近所に用事があって少しウォーキング。天気も良くて気分もリフレッシュできた。</td>
+          </tr>
+          <tr data-dist="7.12" data-pace="6:50" data-cadence="148" data-kcal="555" data-elev="89" data-time="0:48:37">
+            <td>2/4</td>
+            <td>7.12</td>
+            <td>6:50</td>
+            <td>148</td>
+            <td>555</td>
+            <td>89</td>
+            <td>0:48:37</td>
+            <td>はじめてランニングシューズで走った記念日。</td>
+          </tr>
+          <tr data-dist="9.61" data-pace="7:07" data-cadence="152" data-kcal="735" data-elev="105" data-time="1:08:24">
+            <td>2/13</td>
+            <td>9.61</td>
+            <td>7:07</td>
+            <td>152</td>
+            <td>735</td>
+            <td>105</td>
+            <td>1:08:24</td>
+            <td>後半にかけてペースを上げれた、もう少しで10km。</td>
+          </tr>
+          <tr data-dist="12.18" data-pace="6:36" data-cadence="141" data-kcal="936" data-elev="110" data-time="1:20:19">
+            <td>2/18</td>
+            <td>12.18</td>
+            <td>6:36</td>
+            <td>141</td>
+            <td>936</td>
+            <td>110</td>
+            <td>1:20:19</td>
+            <td>ヒールロックで走った。つま先の痛みが無く最高。5km地点で幸せホルモン？みたいなものを感じた。最後はランナーズハイ？ずっと走れそうみたいな感覚になった。初めての10km越え。</td>
+          </tr>
+          <tr data-dist="13.71" data-pace="6:11" data-cadence="151" data-kcal="1017" data-elev="100" data-time="1:24:43">
+            <td>2/23</td>
+            <td>13.71</td>
+            <td>6:11</td>
+            <td>151</td>
+            <td>1017</td>
+            <td>100</td>
+            <td>1:24:43</td>
+            <td>過去最長距離。5分台/kmで走れるようになってきた。初めてのフルマラソンでサブ4狙えるんじゃないかと妄想してみたり…。</td>
+          </tr>
+          <tr data-dist="7.82" data-pace="6:50" data-cadence="155" data-kcal="598" data-elev="51" data-time="0:53:26">
+            <td>2/27</td>
+            <td>7.82</td>
+            <td>6:50</td>
+            <td>155</td>
+            <td>598</td>
+            <td>51</td>
+            <td>0:53:26</td>
+            <td>初めての月間走行距離50km超え！</td>
+          </tr>
+          <tr data-dist="17.47" data-pace="6:02" data-cadence="148" data-kcal="1300" data-elev="135" data-time="1:45:22">
+            <td>3/4</td>
+            <td>17.47</td>
+            <td>6:02</td>
+            <td>148</td>
+            <td>1300</td>
+            <td>135</td>
+            <td>1:45:22</td>
+            <td>初めての15km越え。平均ペースも上がってきたが、13km以降足の感覚が無くなっていた。</td>
+          </tr>
+          <tr data-dist="3.06" data-pace="5:18" data-cadence="157" data-kcal="235" data-elev="21" data-time="0:16:14">
+            <td>3/10</td>
+            <td>3.06</td>
+            <td>5:18</td>
+            <td>157</td>
+            <td>235</td>
+            <td>21</td>
+            <td>0:16:14</td>
+            <td>少し疲れが残っていたのと、時間があまりなかったので、いつものコースで3kmのタイムアタック。呼吸が辛かったが良い経験になった。</td>
+          </tr>
+          <!-- ↓走ったらここに行を追加 -->
+          <!--
+          <tr data-dist="" data-pace="" data-cadence="" data-kcal="" data-elev="" data-time="">
+            <td>月/日</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>ひとこと</td>
+          </tr>
+          -->
+        </tbody>
       </table>
     </div>
   </section>
 
   <section>
-    <h2>📊 年間まとめ</h2>
+    <h2>📊 年間まとめ（自動集計）</h2>
     <div class="stats-grid">
       <div class="stat-card">
         <div class="icon">🌍</div>
-        <div class="value">- km</div>
+        <div class="value" id="totalDist">-</div>
         <div class="label">年間走行距離</div>
       </div>
       <div class="stat-card">
         <div class="icon">⏱</div>
-        <div class="value">-</div>
+        <div class="value" id="avgPace">-</div>
         <div class="label">平均ペース</div>
       </div>
       <div class="stat-card">
         <div class="icon">📅</div>
-        <div class="value">- 回</div>
+        <div class="value" id="totalCount">-</div>
         <div class="label">トレーニング回数</div>
       </div>
       <div class="stat-card">
         <div class="icon">🔥</div>
-        <div class="value">- kcal</div>
+        <div class="value" id="totalKcal">-</div>
         <div class="label">消費カロリー</div>
       </div>
       <div class="stat-card">
         <div class="icon">⛰</div>
-        <div class="value">- m</div>
+        <div class="value" id="totalElev">-</div>
         <div class="label">累積標高</div>
       </div>
       <div class="stat-card">
         <div class="icon">🏃</div>
-        <div class="value">-</div>
+        <div class="value" id="totalTime">-</div>
         <div class="label">トレーニング時間</div>
       </div>
     </div>
@@ -323,7 +337,7 @@
   <section>
     <h2>💬 感想</h2>
     <p>1月は2回だけのトレーニング。しかもそのうち1回はウォーキングでした。言い訳になるけど、雪が積もっていたので走りたい日に走れないことが多くあった。練習できない焦りはあったけれど、身体をしっかり休ませることが出来た。</p>
-    <p>2月に入ってアシックスのNOVAVRAST5という人生初めてのランニングシューズを手に入れた。はじめはつま先が痛くてサイズ間違ったかなぁ？と思ったけれど、AIに相談したらヒールロックという紐の結び方を教えてくれた。実際に走ってみると今まであったつま先の痛みが無くなって走行距離、平均ペースも伸びて、月間50㎞も達成できた。</p>
+    <p>2月に入ってアシックスのNOVAVRAST5という人生初めてのランニングシューズを手に入れた。はじめはつま先が痛くてサイズ間違ったかなぁ？と思ったけれど、AIに相談したらヒールロックという紐の結び方を教えてくれた。実際に走ってみると今まであったつま先の痛みが無くなって走行距離、平均ペースも伸びて、月間50kmも達成できた。</p>
   </section>
 
 </div>
@@ -331,6 +345,78 @@
 <footer>
   &copy; 2026 走れ！おれ！-40歳からの挑戦-
 </footer>
+
+<script>
+  function calcStats() {
+    const rows = document.querySelectorAll('#runTable tbody tr[data-dist]');
+
+    let totalDist = 0;
+    let totalPaceSec = 0;
+    let totalCount = 0;
+    let totalKcal = 0;
+    let totalElev = 0;
+    let totalTimeSec = 0;
+
+    rows.forEach(row => {
+      const dist    = parseFloat(row.dataset.dist)  || 0;
+      const kcal    = parseFloat(row.dataset.kcal)  || 0;
+      const elev    = parseFloat(row.dataset.elev)  || 0;
+
+      // ペース (分:秒) → 秒
+      const paceStr   = row.dataset.pace || '';
+      const paceParts = paceStr.split(':');
+      const paceSec   = paceParts.length === 2
+        ? parseInt(paceParts[0]) * 60 + parseInt(paceParts[1]) : 0;
+
+      // 時間 (時:分:秒) → 秒
+      const timeStr   = row.dataset.time || '';
+      const timeParts = timeStr.split(':');
+      let timeSec = 0;
+      if (timeParts.length === 3) {
+        timeSec = parseInt(timeParts[0]) * 3600 + parseInt(timeParts[1]) * 60 + parseInt(timeParts[2]);
+      } else if (timeParts.length === 2) {
+        timeSec = parseInt(timeParts[0]) * 60 + parseInt(timeParts[1]);
+      }
+
+      totalDist     += dist;
+      totalPaceSec  += paceSec;
+      totalCount++;
+      totalKcal     += kcal;
+      totalElev     += elev;
+      totalTimeSec  += timeSec;
+    });
+
+    document.getElementById('totalDist').textContent =
+      totalDist > 0 ? totalDist.toFixed(2) + ' km' : '-';
+
+    if (totalCount > 0 && totalPaceSec > 0) {
+      const avgSec    = Math.round(totalPaceSec / totalCount);
+      const avgMin    = Math.floor(avgSec / 60);
+      const avgSecRem = avgSec % 60;
+      document.getElementById('avgPace').textContent =
+        avgMin + ':' + String(avgSecRem).padStart(2, '0') + ' /km';
+    }
+
+    document.getElementById('totalCount').textContent =
+      totalCount > 0 ? totalCount + ' 回' : '-';
+
+    document.getElementById('totalKcal').textContent =
+      totalKcal > 0 ? totalKcal.toLocaleString() + ' kcal' : '-';
+
+    document.getElementById('totalElev').textContent =
+      totalElev > 0 ? totalElev.toLocaleString() + ' m' : '-';
+
+    if (totalTimeSec > 0) {
+      const h = Math.floor(totalTimeSec / 3600);
+      const m = Math.floor((totalTimeSec % 3600) / 60);
+      const s = totalTimeSec % 60;
+      document.getElementById('totalTime').textContent =
+        h + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+    }
+  }
+
+  calcStats();
+</script>
 
 </body>
 </html>
