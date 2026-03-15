@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>プロフィール｜走れ！おれ！</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="「走れ！おれ！」管理人のプロフィール。39歳・工場作業員がフルマラソン完走と副業独立を目指すブログ。">
+  <!-- OGP -->
+  <meta property="og:title" content="プロフィール｜走れ！おれ！">
+  <meta property="og:description" content="「走れ！おれ！」管理人のプロフィール。39歳・工場作業員がフルマラソン完走と副業独立を目指すブログ。">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://jun-challenge.github.io/hashireore/profile.html">
+  <meta property="og:image" content="https://jun-challenge.github.io/hashireore/ogp.png">
+  <!-- X（旧Twitter） -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="プロフィール｜走れ！おれ！">
+  <meta name="twitter:description" content="「走れ！おれ！」管理人のプロフィール。39歳・工場作業員がフルマラソン完走と副業独立を目指すブログ。">
+  <meta name="twitter:image" content="https://jun-challenge.github.io/hashireore/ogp.png">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FR2XD8T0NX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FR2XD8T0NX');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Noto Sans JP', sans-serif;
+      background: #f8fafc;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0077cc, #00c6ff);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    nav {
+      background: white;
+      text-align: center;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+
+    section {
+      background: white;
+      margin: 30px 0;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      margin-top: 0;
+      border-left: 6px solid #0077cc;
+      padding-left: 10px;
+    }
+
+    /* プロフィールカード */
+    .profile-card {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .profile-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0077cc, #00c6ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      flex-shrink: 0;
+    }
+
+    .profile-info h3 {
+      margin: 0 0 5px;
+      font-size: 22px;
+    }
+
+    .profile-info p {
+      margin: 0;
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* 基本情報テーブル */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .info-table th,
+    .info-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+      font-size: 15px;
+    }
+
+    .info-table th {
+      width: 30%;
+      color: #0077cc;
+      font-weight: bold;
+      background: #f8fafc;
+    }
+
+    /* 目標カード */
+    .goal-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .goal-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 15px;
+    }
+
+    .goal-list li:last-child {
+      border-bottom: none;
+    }
+
+    .goal-list .goal-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    /* メッセージ */
+    .message-box {
+      background: linear-gradient(135deg, #e8f4ff, #f0faff);
+      border-left: 4px solid #0077cc;
+      border-radius: 8px;
+      padding: 20px 25px;
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 24px; }
+      .profile-card { flex-direction: column; align-items: flex-start; }
+      .info-table th { width: 35%; }
+      nav a { margin: 0 8px; font-size: 14px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>👤 プロフィール</h1>
+  <p>このブログと管理人について</p>
+</header>
+
+<nav>
+  <a href="index.html">← トップへ戻る</a>
+</nav>
+
+<div class="container">
+
+  <section>
+    <h2>👋 はじめまして</h2>
+    <div class="profile-card">
+      <div class="profile-icon">🏃</div>
+      <div class="profile-info">
+        <h3>走れ！おれ！ 管理人</h3>
+        <p>工場作業員</p>
+        <p>走る、稼ぐ、考える。40歳からのリアルな挑戦を記録しています。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📋 基本情報</h2>
+    <table class="info-table">
+      <tr>
+        <th>年齢</th>
+        <td>39歳（2026年現在）</td>
+      </tr>
+      <tr>
+        <th>職業</th>
+        <td>工場作業員</td>
+      </tr>
+      <tr>
+        <th>趣味</th>
+        <td>ランニング・自己啓発になる動画や文章を漁ること。</td>
+      </tr>
+      <tr>
+        <th>ブログ開始</th>
+        <td>2026年</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>💡 ブログを始めたきっかけ</h2>
+    <p>2026年に40歳になる。工場で毎日同じ作業を繰り返す日々。気がつけば、人生の半分近くが過ぎていた。<br><br>「このまま定年まで働いて終わるのか？」<br><br>そんなことを考える時間が少しずつ増えていった。<br>働きながら副収入を得て、最終的に自分の力で生きていけるようになりたい。<br>そのための第一歩として、このブログを始めた。</p>
+    <p>YouTubeで副業の動画を見たり、ブログの記事を読みあさったりしているうちに、パソコンとスマホはあったのですぐに始められそうと思いブログ運営に手をつけてみた。もうすぐ40歳になるし今動かないと何も変わらないと思ってやってみると、コードを書いたりページを公開したりする作業が意外と楽しかった。それが続けられている理由かもしれない。</p>
+  </section>
+
+  <section>
+    <h2>🎯 目標</h2>
+    <ul class="goal-list">
+      <li>
+        <span class="goal-icon">🏃</span>
+        <div>
+          <strong>2026年中にフルマラソンを完走する</strong><br>
+          高校卒業以来約20年間ほぼ運動をしてこなかった。40歳を目前に決心し、最初は3㎞しか走れなかったけど、フルマラソンを完走する姿を読者に見せたい。
+        </div>
+      </li>
+      <li>
+        <span class="goal-icon">💻</span>
+        <div>
+          <strong>副業で会社を辞められるくらい稼ぐ</strong><br>
+          まずは月1万円。そしていつか工場を辞めて、自分の力だけで生活できるようになることが最終的な夢。
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💬 読者へのメッセージ</h2>
+    <div class="message-box">
+      このブログでは、飾らないリアルをお届けすることを約束します。<br>
+      うまくいったことも、失敗したことも、正直に書いていきます。<br><br>
+      「40歳からでも変われる」ことを、自分自身で証明したい。<br>
+      同じように何かを変えたいと思っている人の、小さな背中押しになったら嬉しいです。<br><br>
+      今はまだ何者でもない普通の工場作業員。でも10年後、<br>
+      このページを読み返したとき<br><br>
+      「ここが人生のスタートだった」<br><br>
+      と思えるように挑戦を続けていきます。
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 走れ！おれ！-40歳からの挑戦-
+</footer>
+
+</body>
+</html>

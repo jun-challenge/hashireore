@@ -3,23 +3,20 @@
 
   <url>
     <loc>https://jun-challenge.github.io/hashireore/</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://jun-challenge.github.io/hashireore/running-2026.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://jun-challenge.github.io/hashireore/running-2025.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jun-challenge.github.io/hashireore/profile.html</loc>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
